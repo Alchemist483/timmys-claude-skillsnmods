@@ -6,15 +6,20 @@ This is a collection of the mods and skills I make for Claude Code. Each one is 
 
 ### gistit
 
-After every reply, gistit shows one short line just above the box where you type. The line says what just happened and, when Claude needs something from you, what is waiting on you (after a `→`). You can see the gist at a glance without reading the whole reply. That helps most on a phone.
+gistit adds two slim lines just above the box where you type:
 
-Short replies are shown as they are. Longer replies are summarized by Claude Haiku, using your own Claude account. That costs a few hundred tokens per reply and can add up to about a second when a turn ends.
+```
+✦ Fixed the login bug, all tests pass
+→ review the diff                     ▬▬▬▭▭  42% · 3 files · 25m
+```
 
-### heatmeter
+- **The gist:** after every reply, one short line says what just happened. You can see it at a glance without reading the whole reply, which helps most on a phone.
+- **What's waiting on you:** when Claude needs something from you, it shows in orange after the `→`.
+- **The meter:** how full the context window is, as a small bar from green to red, plus how many files Claude has changed and how long the session has run. Past 80% context, a tiny ⟳ appears. Click it to compact the conversation.
 
-heatmeter adds a slim row above the prompt. It shows how full the context window is, as a small bar that goes from green to red. It also shows how many files Claude has changed this session and how long the session has been running. When the context passes 80%, a tiny ⟳ icon appears. Click it to compact the conversation.
+Short replies are shown as they are. Longer replies are summarized by Claude Haiku, using your own Claude account. That costs a few hundred tokens per reply and can add up to a second or two when a turn ends. If a summary fails, the line says why.
 
-Files changed through shell commands aren't counted, only Claude's own edits.
+Only Claude's own edits count as changed files, not changes made through shell commands. In the desktop app, the band is hidden while one of the app's choice boxes is open.
 
 ## Install
 
@@ -22,7 +27,6 @@ At the prompt of a terminal Claude Code session:
 
 ```
 /plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
-/plugin install heatmeter --marketplace Alchemist483/timmys-claude-skillsnmods
 ```
 
 Answer `y` to add the marketplace, then pick a scope.
@@ -31,7 +35,12 @@ From a shell:
 
 ```bash
 claude plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
-claude plugin install heatmeter --marketplace Alchemist483/timmys-claude-skillsnmods
+```
+
+If you installed the older separate `heatmeter` mod, uninstall it: its meter is now part of gistit.
+
+```bash
+claude plugin uninstall heatmeter
 ```
 
 In the desktop app: click **+** next to the prompt box, then **Plugins**, then **Add marketplace** with `Alchemist483/timmys-claude-skillsnmods`, then **Add plugin**.
