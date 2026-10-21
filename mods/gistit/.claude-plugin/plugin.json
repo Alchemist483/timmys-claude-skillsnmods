@@ -1,0 +1,11 @@
+{
+  "name": "gistit",
+  "version": "0.1.0",
+  "description": "A one-line gist above the prompt: what happened and what is waiting on you",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "meridian483"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/meridian483/timmys-claude-skills-and-mods"
+}

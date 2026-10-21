@@ -1,0 +1,11 @@
+{
+  "name": "heatmeter",
+  "version": "0.1.0",
+  "description": "A slim row above the prompt: context bar, files touched, time spent, and a compact hint",
+  "types": "./types/index.d.ts",
+  "author": {
+    "name": "meridian483"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/meridian483/timmys-claude-skills-and-mods"
+}

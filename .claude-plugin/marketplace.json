@@ -1,0 +1,9 @@
+{
+  "name": "timmys-claude-skills-and-mods",
+  "owner": { "name": "meridian483" },
+  "description": "Small Claude Code mods and skills that look like part of the app",
+  "plugins": [
+    { "name": "gistit", "source": "./mods/gistit" },
+    { "name": "heatmeter", "source": "./mods/heatmeter" }
+  ]
+}
