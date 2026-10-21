@@ -163,7 +163,8 @@ export const register: Register = on => {
     const { Box, Text } = $.ui.resolve(e)
     const waiting = e.props.hasSurvey ? '' : v.waiting // a choice box already asks
     return (
-      <Box flexDirection="column" paddingX={1}>
+      // gap "xs": a few pixels on desktop, no extra row on the terminal
+      <Box flexDirection="column" paddingX={1} gap="xs">
         {v.done ? (
           <Text color="inactive" size="footnote" wrap="truncate-end">
             <Text color="claude">✦ </Text>
@@ -173,7 +174,11 @@ export const register: Register = on => {
         <Box flexDirection="row" justifyContent="space-between" alignItems="center" gap={2}>
           <Box flexShrink={1} minWidth={0}>
             {waiting ? (
-              <Text color="claude" size="footnote" weight="medium" wrap="truncate-end">→ {waiting}</Text>
+              // only the arrow is orange: the ask itself reads in the app's own text colour
+              <Text size="footnote" weight="semibold" wrap="truncate-end">
+                <Text color="claude">→ </Text>
+                {waiting}
+              </Text>
             ) : null}
           </Box>
           <Box flexDirection="row" alignItems="center" gap={1} flexShrink={0}>
