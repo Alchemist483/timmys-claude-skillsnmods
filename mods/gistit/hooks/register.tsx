@@ -6,8 +6,8 @@ import type { Gist } from '../types'
 const gist = atom({ plugin: 'gistit', key: 'gist' } as const, null as Gist)
 
 const SYSTEM = `You write the gist of an AI coding assistant's reply for a busy reader on a phone.
-Write ONE line, max ~20 words, in the reply's own language: what happened.
-If the reply asks the reader for something, end with " → " and that ask in 2-5 words.
+Write ONE line, max 12 words, in the reply's own language: what happened.
+If the reply asks the reader for something, end with " → " and that ask in 2-5 words, and do not mention the ask before the arrow.
 Output only the line: no quotes, no markdown, no preamble.`
 
 // shortcut: head + tail only (outcome and asks sit at the end), send more if gists miss mid-reply questions
@@ -68,15 +68,19 @@ export const register: Register = on => {
     const i = text.lastIndexOf(' → ')
     const done = i < 0 ? text : text.slice(0, i)
     const waiting = i < 0 ? '' : text.slice(i + 3)
-    // theme keys, so it follows the app's own light/dark palette; one Text so the ask wraps inline
+    // theme keys follow the app's palette; one line: the gist truncates, the ask never does
     return (
       <Box flexDirection="column">
         <Box flexDirection="row" gap={1} paddingX={1}>
           <Text color="claude" size="footnote">✦</Text>
-          <Text color="inactive" size="footnote">
-            {done}
-            {waiting ? <Text color="suggestion" weight="medium"> → {waiting}</Text> : null}
-          </Text>
+          <Box flexShrink={1} minWidth={0}>
+            <Text color="inactive" size="footnote" wrap="truncate-end">{done}</Text>
+          </Box>
+          {waiting ? (
+            <Box flexShrink={0}>
+              <Text color="claude" size="footnote" weight="medium">→ {waiting}</Text>
+            </Box>
+          ) : null}
         </Box>
         {below}
       </Box>
