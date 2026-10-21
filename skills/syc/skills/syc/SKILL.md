@@ -1,6 +1,6 @@
 ---
 name: syc
-description: Anti-sycophancy check ("Project Sick Offend"). Gets a blind, independent verdict on an idea, plan, claim, draft or decision from a fresh subagent that cannot see what the user believes or wants. Use when the user types /syc, asks for an objective / unbiased / honest second opinion, asks "am I wrong?", "is this actually good?", or wants Claude to stop just agreeing.
+description: Anti-sycophancy check. Gets a blind, independent verdict on an idea, plan, claim, draft or decision from a fresh subagent that cannot see what the user believes or wants. Use when the user types /syc, asks for an objective / unbiased / honest second opinion, asks "am I wrong?", "is this actually good?", or wants Claude to stop just agreeing.
 ---
 
 # /syc: blind second opinion
