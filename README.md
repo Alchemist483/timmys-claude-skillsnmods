@@ -21,8 +21,8 @@ Files changed through shell commands aren't counted, only Claude's own edits.
 At the prompt of a terminal Claude Code session:
 
 ```
-/plugin install gistit --marketplace meridian483/timmys-claude-skills-and-mods
-/plugin install heatmeter --marketplace meridian483/timmys-claude-skills-and-mods
+/plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
+/plugin install heatmeter --marketplace Alchemist483/timmys-claude-skillsnmods
 ```
 
 Answer `y` to add the marketplace, then pick a scope.
@@ -30,11 +30,11 @@ Answer `y` to add the marketplace, then pick a scope.
 From a shell:
 
 ```bash
-claude plugin install gistit --marketplace meridian483/timmys-claude-skills-and-mods
-claude plugin install heatmeter --marketplace meridian483/timmys-claude-skills-and-mods
+claude plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
+claude plugin install heatmeter --marketplace Alchemist483/timmys-claude-skillsnmods
 ```
 
-In the desktop app: click **+** next to the prompt box, then **Plugins**, then **Add marketplace** with `meridian483/timmys-claude-skills-and-mods`, then **Add plugin**.
+In the desktop app: click **+** next to the prompt box, then **Plugins**, then **Add marketplace** with `Alchemist483/timmys-claude-skillsnmods`, then **Add plugin**.
 
 ## License
 
