@@ -4,7 +4,7 @@ This is a collection of the mods and skills I make for Claude Code. Each one is 
 
 ## Skills
 
-### syc
+### sycophant
 
 AI models tend to agree with you. They pick up on what you hope to hear and lean toward it. `/syc` gets you a second opinion that can't do that:
 
