@@ -3,6 +3,7 @@
   "owner": { "name": "Alchemist483" },
   "description": "Small Claude Code mods and skills that look like part of the app",
   "plugins": [
-    { "name": "gistit", "source": "./mods/gistit" }
+    { "name": "gistit", "source": "./mods/gistit" },
+    { "name": "syc", "source": "./skills/syc" }
   ]
 }

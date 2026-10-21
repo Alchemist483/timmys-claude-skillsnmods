@@ -21,9 +21,34 @@ Short replies are shown as they are. Longer replies are summarized by Claude Hai
 
 Only Claude's own edits count as changed files, not changes made through shell commands. In the desktop app, the band is hidden while one of the app's choice boxes is open.
 
+## Skills
+
+### syc
+
+AI models tend to agree with you. They pick up on what you hope to hear and lean toward it. `/syc` gets you a second opinion that can't do that:
+
+```
+/syc I'm thinking of quitting my job to sell AI prompts on Etsy, I'm so excited about this
+```
+
+```
+❌ NO · Likely
+Keep the job and test sales on the side
+
+👍 For: Low startup cost and flexible hours
+👎 Against: Crowded market and free AI makes prompts cheap
+🔄 Flip if: Side sales already beat your salary for months
+```
+
+- **Blind:** Claude rewrites your question as a short, neutral note about "someone", with your opinion and excitement taken out. You see that note first, so you can check nothing slipped through.
+- **Fresh reviewer:** a separate Claude that can't see your conversation judges the note. It first argues for the opposite answer, then decides.
+- **One look:** yes, no or depends, how sure it is (Certain, Likely, Lean or Toss-up), the best point each way, and what would change its mind. If nothing realistic would, it says so.
+
+It never tells the reviewer to "be harsh", because research shows that only makes models disagree for the sake of it. A good idea should get a yes. Each check runs on Claude Opus and uses about 4,000 tokens.
+
 ## Install
 
-At the prompt of a terminal Claude Code session:
+At the prompt of a terminal Claude Code session (swap in `syc` for the skill):
 
 ```
 /plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
@@ -35,6 +60,10 @@ From a shell:
 
 ```bash
 claude plugin install gistit --marketplace Alchemist483/timmys-claude-skillsnmods
+```
+
+```bash
+claude plugin install syc --marketplace Alchemist483/timmys-claude-skillsnmods
 ```
 
 If you installed the older separate `heatmeter` mod, uninstall it: its meter is now part of gistit.

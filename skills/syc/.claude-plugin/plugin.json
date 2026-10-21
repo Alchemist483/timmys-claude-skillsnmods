@@ -1,0 +1,10 @@
+{
+  "name": "syc",
+  "version": "0.1.0",
+  "description": "A blind second opinion: a fresh reviewer judges your idea without knowing what you want to hear",
+  "author": {
+    "name": "Alchemist483"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Alchemist483/timmys-claude-skillsnmods"
+}
